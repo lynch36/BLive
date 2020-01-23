@@ -1,5 +1,3 @@
-*Poder poner fotos de los libros
-
 *Colocar 2 secciones
     -libros leidos
     -libros que me gustaria leer

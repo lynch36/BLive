@@ -1,12 +1,12 @@
-<div class="container p-4">
+<div class="container p-3">
     <div class="row">
         {{#each books}}
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                        <h3 class="card-title text-uppercase">
-                            {{title}}
-                        </h3>
+                        <h3 class="card-title text-uppercase">{{title}}</h3>
+                        <img src="{{img}}" alt="Portada" class="portada">
+                        <br>
                         <small>{{autor}}</small>
                         <p class="m-2">{{descripcion}}</p>
                         <p>{{timeago created_at}}</p>

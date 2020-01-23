@@ -45,17 +45,21 @@ app.use((req, res, next) => {
     app.locals.user = req.user;
     next();
 });
+
 // Routes
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/books', require('./routes/books'));
+
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
+
 // Starting Server
 const puerto = app.get('port');
 app.listen(puerto, () => {
     console.log('Server On Port ', puerto);
 });
+
 // 404
 app.get('*', (req, res) => {
     res.redirect('/');

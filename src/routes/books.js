@@ -9,9 +9,10 @@ router.get('/add', isLoggedIn, (req, res) => {
 });
 
 router.post('/add', isLoggedIn, async (req, res) => {
-    const {title, autor, descripcion} = req.body;
+    const {title, img, autor, descripcion} = req.body;
     const newBook = {
         title,
+        img,
         autor,
         descripcion,
         user_id: req.user.id
@@ -42,9 +43,10 @@ router.get('/edit/:id', isLoggedIn, async (req, res) => {
 
 router.post('/edit/:id', isLoggedIn, async (req, res) => {
     const { id } = req.params;
-    const { title, descripcion, autor } = req.body;
+    const { title, img, descripcion, autor } = req.body;
     const newBook = {
         title,
+        img,
         descripcion,
         autor
     };
