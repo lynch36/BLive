@@ -26,6 +26,7 @@ CREATE TABLE books(
     descripcion TEXT,
     user_id INT(11),
     created_at timestamp NOT NULL DEFAULT current_timestamp,
+    img VARCHAR(100) NOT NULL,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
@@ -33,4 +34,22 @@ ALTER TABLE books
     ADD PRIMARY KEY(id);
 
 ALTER TABLE books
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+
+--Wish Books Tables--
+CREATE TABLE wishBooks(
+    id INT(11) NOT NULL,
+    title VARCHAR(150) NOT NULL, 
+    autor VARCHAR(150) NOT NULL,
+    descripcion TEXT,
+    user_id INT(11),
+    created_at timestamp NOT NULL DEFAULT current_timestamp,
+    img VARCHAR(100) NOT NULL,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+ALTER TABLE wishBooks
+    ADD PRIMARY KEY(id);
+
+ALTER TABLE wishBooks
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;

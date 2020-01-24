@@ -1,5 +1,1 @@
-*Colocar 2 secciones
-    -libros leidos
-    -libros que me gustaria leer
-
 *Agregar JQuery

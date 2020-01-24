@@ -1,7 +1,7 @@
-<h3 class="text-center m-3">My Books Finished</h3>
+<h3 class="text-center m-3">My Wish Books</h3>
 <div class="container p-3">
     <div class="row">
-        {{#each books}}
+        {{#each wishbooks}}
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
@@ -11,16 +11,16 @@
                         <small>{{autor}}</small>
                         <p class="m-2">{{descripcion}}</p>
                         <p>{{timeago created_at}}</p>
-                        <a href="/books/delete/{{id}}" class="btn btn-danger">Delete</a>
-                        <a href="/books/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                        <a href="/wishBooks/delete/{{id}}" class="btn btn-danger">Delete</a>
+                        <a href="/wishBooks/edit/{{id}}" class="btn btn-secondary">Edit</a>
                     </div>
                 </div>
             </div>
         {{else}}
         <div class="col-md-4 mx-auto">
             <div class="card card-body text-center">
-                <p>There are no Finished Books yet</p>
-                <a href="/books/add">Book Finished</a>
+                <p>There are no Finished Wish Books yet</p>
+                <a href="/wishBooks/add">Add Wish Books</a>
             </div>
         </div>    
         {{/each}}
