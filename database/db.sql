@@ -26,7 +26,7 @@ CREATE TABLE books(
     descripcion TEXT,
     user_id INT(11),
     created_at timestamp NOT NULL DEFAULT current_timestamp,
-    img VARCHAR(100) NOT NULL,
+    img VARCHAR(300) NOT NULL,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
@@ -44,8 +44,8 @@ CREATE TABLE wishBooks(
     descripcion TEXT,
     user_id INT(11),
     created_at timestamp NOT NULL DEFAULT current_timestamp,
-    img VARCHAR(100) NOT NULL,
-    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+    img VARCHAR(300) NOT NULL,
+    CONSTRAINT fk_userr FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 ALTER TABLE wishBooks

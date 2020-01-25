@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV != 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
@@ -58,7 +62,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Starting Server
 const puerto = app.get('port');
 app.listen(puerto, () => {
-    console.log('Server On Port ', puerto);
+    console.log('Server On Port', puerto);
 });
 
 // 404
