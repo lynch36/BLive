@@ -1,7 +1,7 @@
 # BLive
 BLive es una app para tener guardada una referencia sobre los libros que se han leido "**Books**" y tambien cuenta con la 
 opcion de poder guardar los libros que deseamos leer en un futuro "**WishBooks**", todo esto con la finalidad de tener de manera 
-grafica guardados nuestros libros. [BLive](https://blivee.herokuapp.com/)
+grafica guardados nuestros libros.
 
 ## Screen Shot
 ### Inicio
